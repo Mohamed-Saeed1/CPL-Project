@@ -1,4 +1,4 @@
-# SIC Library System
+# Library System
 ## Overview
 <br>This is a system that adds student and book information to system but it is not stored in a file (so the data is their as long as the system is running), so on exiting the system the data will be lost.<br/>
 <br>Books data can be added in a list inside the system where the book name and ID are stored.<br/>
