@@ -185,8 +185,10 @@ void registerr(void)
     char yy;
     printf("1- Enter your first and last name : ");
     char *n = malloc(40);
-    if (b > 0)
+    if (b >= 0)
+    {
         scanf("%c",&yy);
+    }
     scanf("%[^\n]",n);
     int i, x = strlen(n) + 1;
     students_list[b].f_l_name = malloc(x);
@@ -195,7 +197,7 @@ void registerr(void)
         students_list[b].f_l_name[i] = n[i];
     }
     free(n);
-    printf("\n2- Enter your id number :");
+    printf("2- Enter your id number :");
     scanf("%d",&students_list[b].id);
     b++;
     printf("3- Enter your password : ");
@@ -207,9 +209,9 @@ void registerr(void)
 void view_registered(void)
 {
     //Function to view all the stored users
-    int i, y = 0;
+    int y = 0;
     printf("\nFirst and last name - ID - Password\n");
-    for (i = 0; i < b; i++)
+    for (int i = 0; i < b; i++)
     {
         printf("%s - %d - %d\n",students_list[i].f_l_name, students_list[i].id, students_list[i].password);
     }
